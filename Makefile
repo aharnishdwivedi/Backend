@@ -48,3 +48,23 @@ setup: deps migrate-up
 
 # Development workflow
 dev: setup run
+
+# Docker commands
+docker-build:
+	docker-compose build
+
+docker-up:
+	docker-compose up -d
+
+docker-down:
+	docker-compose down
+
+docker-logs:
+	docker-compose logs -f
+
+docker-clean:
+	docker-compose down -v --remove-orphans
+	docker system prune -f
+
+# Docker development workflow
+docker-dev: docker-build docker-up

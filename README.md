@@ -35,10 +35,12 @@ A full-stack application demonstrating AI-native ITSM capabilities with intellig
 ### Technology Stack
 
 - **Backend**: Go 1.21+ with Echo framework
-- **Database**: MySQL 8.0+
+- **Database**: MySQL 8.0+ with migrations
 - **AI Integration**: OpenAI GPT-3.5 Turbo
 - **Testing**: Testify with mocking
 - **Frontend**: Vanilla JavaScript with modern CSS
+- **Containerization**: Docker with multi-stage builds
+- **Orchestration**: Docker Compose for local development
 
 ## 📋 Prerequisites
 
@@ -49,7 +51,69 @@ A full-stack application demonstrating AI-native ITSM capabilities with intellig
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repository
+### Option 1: Docker Setup (Recommended)
+
+#### Prerequisites
+- Docker and Docker Compose installed
+- OpenAI API key
+
+#### Quick Start with Docker
+
+1. **Clone the Repository**
+```bash
+git clone <repository-url>
+cd incident-triage-assistant
+```
+
+2. **Configure Environment**
+```bash
+cp env.example .env
+```
+
+Edit `.env` with your OpenAI API key:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+3. **Run with Docker**
+```bash
+# Using the provided script
+./scripts/docker-run.sh
+
+# Or using docker-compose directly
+docker-compose up --build -d
+```
+
+4. **Access the Application**
+- Frontend: http://localhost:3000 (serve frontend/index.html)
+- API: http://localhost:8080/api/v1
+- Health Check: http://localhost:8080/api/v1/health
+
+#### Docker Commands
+```bash
+# Build and start services
+make docker-dev
+
+# View logs
+make docker-logs
+
+# Stop services
+make docker-down
+
+# Clean up
+make docker-clean
+```
+
+### Option 2: Local Development Setup
+
+#### Prerequisites
+- Go 1.21 or higher
+- MySQL 8.0 or higher
+- OpenAI API key
+
+#### Setup Steps
+
+1. **Clone the Repository**
 
 ```bash
 git clone <repository-url>

@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+*_test.go
+coverage.out
+coverage.html
+
+# Build artifacts
+bin/
+dist/
+
+# Environment files (except template)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Frontend files (since this is backend only)
+frontend/
+
+# Scripts (not needed in container)
+scripts/
+
+# Makefile (not needed in container)
+Makefile
+
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
