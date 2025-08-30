@@ -2,6 +2,8 @@
 
 A full-stack application demonstrating AI-native ITSM capabilities with intelligent incident triage using OpenAI integration. Built with Go (Echo framework) and clean architecture principles.
 
+**Developed with AI assistance by Aharnish Dwivedi** 🤖👨‍💻
+
 ## 🚀 Features
 
 - **AI-Powered Incident Analysis**: Automatic severity and category classification using OpenAI GPT-3.5
@@ -13,6 +15,8 @@ A full-stack application demonstrating AI-native ITSM capabilities with intellig
 - **Production Ready**: Error handling, logging, and validation
 
 ## 🏗️ Architecture
+
+*This architecture was designed and implemented by Aharnish Dwivedi using AI-assisted development practices.*
 
 ### Clean Architecture Layers
 
@@ -50,6 +54,8 @@ A full-stack application demonstrating AI-native ITSM capabilities with intellig
 - Git
 
 ## 🛠️ Setup Instructions
+
+*Setup instructions prepared by Aharnish Dwivedi for easy deployment and development.*
 
 ### Option 1: Docker Setup (Recommended)
 
@@ -195,6 +201,8 @@ Then visit `http://localhost:3000`
 
 ## 🧪 Testing
 
+*Comprehensive testing strategy implemented by Aharnish Dwivedi with AI assistance to ensure code quality and reliability.*
+
 ### Run All Tests
 
 ```bash
@@ -272,6 +280,8 @@ DELETE /incidents/{id}
 
 ## 🏛️ Software Design Choices & Justification
 
+*Design decisions and architectural choices made by Aharnish Dwivedi with AI assistance to create a robust and scalable solution.*
+
 ### Architecture Decisions
 
 1. **Clean Architecture**: Chosen for maintainability, testability, and separation of concerns
@@ -320,144 +330,29 @@ CREATE TABLE incidents (
 - **Progressive Enhancement**: Works without JavaScript for basic functionality
 - **Real-time Updates**: Automatic refresh after incident creation
 
-## 🤖 AI Code Assistant Usage Log
+## 🤖 AI-Assisted Development
 
-### Interaction 1: Project Structure Setup
-**Prompt**: "Create a clean architecture Go project structure for an incident management system with domain, usecase, and repository layers using Echo framework"
+*This project was developed using AI code assistants (Cursor AI) to demonstrate effective AI-native development practices. The development process involved iterative collaboration with AI to create a production-ready application with clean architecture principles.*
 
-**AI Response**: Provided a comprehensive project structure with proper package organization and dependency injection patterns.
+## 🎯 AI Development Approach
 
-**Action**: Accepted and implemented the suggested structure with minor modifications for our specific use case.
+*Developed by Aharnish Dwivedi using AI code assistants to demonstrate effective AI-native development techniques.*
 
-**Context**: Initial project setup and architecture planning.
+### Key Principles
 
-### Interaction 2: Domain Model Design
-**Prompt**: "Design domain models for incident management with AI-generated fields like severity and category"
+1. **Iterative Development**: Continuous refinement with AI assistance
+2. **Clean Architecture**: Maintained throughout AI-assisted development
+3. **Code Quality**: AI helps ensure best practices and patterns
+4. **Testing**: Comprehensive test coverage with AI-generated tests
+5. **Documentation**: Clear documentation with AI assistance
 
-**AI Response**: Created Incident entity with AI-generated fields, repository interfaces, and AI service contracts.
+### AI Development Benefits
 
-**Action**: Accepted the domain model and extended it with proper validation tags and time fields.
-
-**Context**: Core domain modeling for the incident triage system.
-
-### Interaction 3: OpenAI Integration
-**Prompt**: "Implement OpenAI service for incident analysis with proper error handling and JSON response parsing"
-
-**AI Response**: Provided OpenAI client integration with structured prompts and response validation.
-
-**Action**: Accepted the implementation and added fallback mechanisms for invalid AI responses.
-
-**Context**: AI service implementation for incident classification.
-
-### Interaction 4: Repository Implementation
-**Prompt**: "Create MySQL repository implementation with proper error handling and SQL injection prevention"
-
-**AI Response**: Generated repository with prepared statements, proper error handling, and transaction support.
-
-**Action**: Accepted the implementation and added additional validation for database operations.
-
-**Context**: Data persistence layer implementation.
-
-### Interaction 5: HTTP Handler Testing
-**Prompt**: "Create comprehensive unit tests for Echo HTTP handlers with mocked dependencies"
-
-**AI Response**: Provided test structure with Echo testing utilities and mock implementations.
-
-**Action**: Accepted the test framework and extended it with additional edge case testing.
-
-**Context**: Testing strategy for HTTP layer.
-
-### Interaction 6: Frontend UI Design
-**Prompt**: "Design a modern, responsive frontend for incident management with AI insights display"
-
-**AI Response**: Created HTML/CSS/JS frontend with modern design, real-time updates, and AI insights visualization.
-
-**Action**: Accepted the design and enhanced it with better error handling and loading states.
-
-**Context**: User interface development.
-
-### Interaction 7: Database Migration
-**Prompt**: "Create MySQL migration files for incidents table with proper indexing and constraints"
-
-**AI Response**: Generated migration files with proper schema design, indexes, and rollback scripts.
-
-**Action**: Accepted the migration structure and added additional indexes for performance.
-
-**Context**: Database schema setup.
-
-## 🎯 Prompt Engineering Strategy
-
-### Techniques Used
-
-1. **Specificity**: Provided detailed context about requirements, technology stack, and constraints
-2. **Context Provision**: Included relevant background about clean architecture and Go best practices
-3. **Iteration**: Refined prompts based on AI responses to improve accuracy
-4. **Examples**: Provided concrete examples when requesting implementations
-5. **Error Handling**: Explicitly requested proper error handling and validation
-
-### Example Effective Prompts
-
-**Good Prompt**:
-```
-"Create a MySQL repository implementation for incident management with:
-- Prepared statements for SQL injection prevention
-- Proper error handling with wrapped errors
-- Support for CRUD operations
-- Transaction support for complex operations
-- Logging for debugging
-Use the domain.Incident struct and implement the domain.IncidentRepository interface."
-```
-
-**Poor Prompt**:
-```
-"Make a database thing for incidents"
-```
-
-### AI Assistant Rules/Templates for Larger Projects
-
-For larger projects, I would define the following rules/templates:
-
-#### Code Generation Rules
-```
-1. Always use clean architecture principles
-2. Implement proper error handling with wrapped errors
-3. Add comprehensive logging for debugging
-4. Include unit tests with 80%+ coverage
-5. Use prepared statements for database operations
-6. Follow Go naming conventions and idioms
-7. Add proper validation for all inputs
-8. Include API documentation comments
-```
-
-#### Template for New Features
-```
-Feature: [Feature Name]
-
-Domain Layer:
-- [ ] Define entities and interfaces
-- [ ] Add validation rules
-- [ ] Create domain errors
-
-Use Case Layer:
-- [ ] Implement business logic
-- [ ] Add unit tests
-- [ ] Handle edge cases
-
-Repository Layer:
-- [ ] Implement data access
-- [ ] Add database migrations
-- [ ] Include error handling
-
-Handler Layer:
-- [ ] Create HTTP endpoints
-- [ ] Add request validation
-- [ ] Implement error responses
-
-Testing:
-- [ ] Unit tests for each layer
-- [ ] Integration tests
-- [ ] API tests
-```
+- **Faster Development**: Rapid prototyping and implementation
+- **Best Practices**: AI suggests industry-standard patterns
+- **Error Prevention**: AI helps catch common issues early
+- **Learning**: Demonstrates effective AI-human collaboration
+- **Scalability**: Maintainable code structure with AI guidance
 
 ## 🔧 Assumptions Made
 
@@ -468,6 +363,8 @@ Testing:
 5. **Single Database**: Using single MySQL instance (can be scaled with read replicas)
 
 ## 🚀 Potential Improvements & Future Enhancements
+
+*Future roadmap and enhancement ideas developed by Aharnish Dwivedi based on AI-native development experience.*
 
 ### Short-term Improvements
 1. **Authentication & Authorization**: JWT-based authentication with role-based access
@@ -516,12 +413,16 @@ Testing:
 
 ## 🤝 Contributing
 
+*Contributions are welcome! This project demonstrates AI-assisted development practices.*
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Add tests for new functionality
 5. Ensure all tests pass
 6. Submit a pull request
+
+**Note**: This project was developed by Aharnish Dwivedi using AI code assistants. Feel free to reach out for questions about AI-assisted development practices.
 
 ## 📄 License
 
@@ -534,6 +435,18 @@ For support and questions:
 - Check the documentation
 - Review the test examples
 
+**Developer Contact**: Aharnish Dwivedi  
+**AI Development Expertise**: AI-assisted development, Go, Clean Architecture, Docker
+
+## 👨‍💻 Developer Information
+
+**Developer**: Aharnish Dwivedi  
+**AI Assistant**: Cursor AI  
+**Development Approach**: AI-Native Development  
+**Project Type**: AI-Powered ITSM Solution  
+
+This project demonstrates the effectiveness of AI-assisted development in building production-ready applications with clean architecture principles.
+
 ---
 
-**Built with ❤️ using AI-assisted development**
+**Built with ❤️ using AI-assisted development by Aharnish Dwivedi** 🤖👨‍💻
