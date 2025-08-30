@@ -136,7 +136,7 @@ func TestCreateIncident(t *testing.T) {
 					Return(nil, tt.aiError)
 			}
 
-			if tt.aiError == nil && tt.repoError == nil {
+			if tt.aiError == nil {
 				mockRepo.On("Create", mock.AnythingOfType("*domain.Incident")).Return(tt.repoError)
 			}
 

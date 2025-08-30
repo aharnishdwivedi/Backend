@@ -37,6 +37,15 @@ type AIService interface {
 	AnalyzeIncident(title, description, affectedService string) (*IncidentAnalysis, error)
 }
 
+// IncidentUseCase defines the interface for incident business logic
+type IncidentUseCase interface {
+	CreateIncident(req *CreateIncidentRequest) (*Incident, error)
+	GetIncident(id int) (*Incident, error)
+	GetAllIncidents() ([]*Incident, error)
+	UpdateIncident(id int, req *CreateIncidentRequest) (*Incident, error)
+	DeleteIncident(id int) error
+}
+
 // IncidentAnalysis represents the AI-generated analysis of an incident
 type IncidentAnalysis struct {
 	Severity string `json:"severity"`

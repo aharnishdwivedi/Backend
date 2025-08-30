@@ -1,6 +1,7 @@
 package service
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"incident-triage-assistant/internal/domain"
@@ -10,9 +11,14 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
+// OpenAIClient interface for mocking
+type OpenAIClient interface {
+	CreateChatCompletion(ctx context.Context, req openai.ChatCompletionRequest) (openai.ChatCompletionResponse, error)
+}
+
 // OpenAIService implements the AIService interface using OpenAI API
 type OpenAIService struct {
-	client *openai.Client
+	client OpenAIClient
 }
 
 // NewOpenAIService creates a new OpenAI service instance
@@ -46,6 +52,7 @@ Please respond with only a JSON object in this exact format:
 `, title, description, affectedService)
 
 	resp, err := s.client.CreateChatCompletion(
+		context.Background(),
 		openai.ChatCompletionRequest{
 			Model: openai.GPT3Dot5Turbo,
 			Messages: []openai.ChatCompletionMessage{
@@ -71,7 +78,7 @@ Please respond with only a JSON object in this exact format:
 	}
 
 	content := strings.TrimSpace(resp.Choices[0].Message.Content)
-	
+
 	// Parse JSON response
 	var analysis domain.IncidentAnalysis
 	err = json.Unmarshal([]byte(content), &analysis)

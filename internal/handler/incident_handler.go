@@ -5,18 +5,17 @@ import (
 	"strconv"
 
 	"incident-triage-assistant/internal/domain"
-	"incident-triage-assistant/internal/usecase"
 
 	"github.com/labstack/echo/v4"
 )
 
 // IncidentHandler handles HTTP requests for incident management
 type IncidentHandler struct {
-	incidentUseCase *usecase.IncidentUseCase
+	incidentUseCase domain.IncidentUseCase
 }
 
 // NewIncidentHandler creates a new incident handler
-func NewIncidentHandler(incidentUseCase *usecase.IncidentUseCase) *IncidentHandler {
+func NewIncidentHandler(incidentUseCase domain.IncidentUseCase) *IncidentHandler {
 	return &IncidentHandler{
 		incidentUseCase: incidentUseCase,
 	}

@@ -8,14 +8,13 @@ import (
 	"testing"
 
 	"incident-triage-assistant/internal/domain"
-	"incident-triage-assistant/internal/usecase"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
 
-// MockIncidentUseCase is a mock implementation of IncidentUseCase
+// MockIncidentUseCase is a mock implementation of domain.IncidentUseCase
 type MockIncidentUseCase struct {
 	mock.Mock
 }
@@ -95,7 +94,7 @@ func TestCreateIncident(t *testing.T) {
 			setupMock:      func(mockUC *MockIncidentUseCase) {},
 		},
 		{
-			name: "invalid JSON",
+			name:           "invalid JSON",
 			requestBody:    nil,
 			expectedStatus: http.StatusBadRequest,
 			setupMock:      func(mockUC *MockIncidentUseCase) {},
@@ -149,8 +148,8 @@ func TestGetIncident(t *testing.T) {
 		setupMock      func(*MockIncidentUseCase)
 	}{
 		{
-			name:       "successful incident retrieval",
-			incidentID: "1",
+			name:           "successful incident retrieval",
+			incidentID:     "1",
 			expectedStatus: http.StatusOK,
 			setupMock: func(mockUC *MockIncidentUseCase) {
 				expectedIncident := &domain.Incident{
@@ -171,8 +170,8 @@ func TestGetIncident(t *testing.T) {
 			setupMock:      func(mockUC *MockIncidentUseCase) {},
 		},
 		{
-			name:       "incident not found",
-			incidentID: "999",
+			name:           "incident not found",
+			incidentID:     "999",
 			expectedStatus: http.StatusNotFound,
 			setupMock: func(mockUC *MockIncidentUseCase) {
 				mockUC.On("GetIncident", 999).Return(nil, assert.AnError)
